@@ -18,6 +18,7 @@ print(stams.ranges(number))
 print(stams.median(number))
 ```
 
-[stams pdf](/doc/STAMS.pdf)
+[stams pdf](/doc/STAMS.pdf) </br>
+[source code](/stams/stams.py)
 
 <i>Thank You</i>
