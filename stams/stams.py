@@ -1,6 +1,9 @@
 import math
+from typing import List, Union, Literal
 
-def mean(data):
+data_type = Union[int, float]
+
+def mean(data: List[data_type]) -> float:
     total = 0
     for i in data:
         total += i
@@ -9,7 +12,7 @@ def mean(data):
 
     return mean_val
 
-def median(data):
+def median(data: List[data_type]) -> float:
     
     data.sort()
 
@@ -31,7 +34,7 @@ def median(data):
     
     
 
-def variance(data, def_var='s'):
+def variance(data: List[data_type], def_var: Literal['s', 'p'] ='s') -> float:
     mean_of_data = mean(data=data)
 
     if def_var == 's':
@@ -50,7 +53,7 @@ def variance(data, def_var='s'):
     
     return variance_val
 
-def std(data):
+def std(data: List[data_type]) -> float:
     con_to_variance = variance(data=data)
 
     std_val = math.sqrt(con_to_variance)
@@ -58,7 +61,7 @@ def std(data):
 
     return std_val
 
-def ranges(data):
+def ranges(data: List[data_type]) -> float:
     
     max_val = max(data)
     min_val = min(data)
