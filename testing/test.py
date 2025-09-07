@@ -26,6 +26,9 @@ class StamsTesting(unittest.TestCase):
     def test_range(self):
         self.assertEqual(ranges(self.data), 4.0)
         
+    def test_modus(self):
+        self.assertEqual(modus(["a","a","b","c","d"]), ['a'])
+        
         
 if __name__ == "__main__":
     unittest.main()
