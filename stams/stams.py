@@ -2,6 +2,7 @@ import math
 from typing import List, Union, Literal
 
 data_type = Union[int, float]
+data_type_modus = Union[int, float, str]
 
 def mean(data: List[data_type]) -> float:
     total = 0
@@ -69,5 +70,25 @@ def ranges(data: List[data_type]) -> float:
     range_val = max_val - min_val
 
     return range_val
+
+def modus(data: List[data_type_modus]) -> List[data_type_modus]:
+    
+    data_temp = {}
+
+    for item in data:
+        if item in data_temp:
+            data_temp[item] += 1
+        else:
+            data_temp[item] = 1
+            
+    max_val = max(data_temp.values())
+
+    modes = []
+    for key, val in data_temp.items():
+        if val == max_val:
+            modes.append(key)
+
+
+    return modes
 
 
